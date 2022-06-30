@@ -1,12 +1,16 @@
 import { gql } from "graphql-tag";
 
-export type PRODUCT = {
+export type Product = {
   id: string;
   imageUrl: string;
   price: number;
   title: string;
   description: string;
   createAt: string;
+};
+
+export type Products = {
+  Products: Product[];
 };
 
 const GET_PRODUCTS = gql`
@@ -20,4 +24,14 @@ const GET_PRODUCTS = gql`
   }
 `;
 
+export const GET_PRODUCT = gql`
+  query GET_GET_PRODUCT($id: string) {
+    id
+    imageUrl
+    price
+    title
+    description
+    createAt
+  }
+`;
 export default GET_PRODUCTS;
