@@ -72,4 +72,5 @@ export const grpahqlFetcher = (query: RequestDocument, variables = {}) =>
 
 export const QueryKeys = {
   PRODUCTS: "PRODUCTS",
+  CART: "CART",
 };
